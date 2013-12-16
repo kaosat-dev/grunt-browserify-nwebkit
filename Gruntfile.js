@@ -77,8 +77,6 @@ module.exports = function (grunt) {
   
     clean:{
      testing:["build"]
-
-
     }
 
   });
@@ -111,14 +109,14 @@ module.exports = function (grunt) {
 
 
   //should be a sub task/target
-  grunt.registerTask('desktopBuild', ['clean','browserify:testing','copy:testing','replace:testing','nodewebkit']);
+  grunt.registerTask('desktopBuild', ['clean','browserify:testing','copy:testing','replace:testing','exec','nodewebkit']);
 
   grunt.event.on('watch', function(action, filepath, target) {
     grunt.log.writeln(target + ': ' + filepath + ' has ' + action);
   });
 
 };
-//,'nodewebkit''exec',
+//,'nodewebkit'
 
 //see https://github.com/jmreidy/grunt-browserify/blob/master/examples/mappings/Gruntfile.js
 
