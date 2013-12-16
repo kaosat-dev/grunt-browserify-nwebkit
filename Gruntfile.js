@@ -33,11 +33,11 @@ module.exports = function (grunt) {
     },
     nodewebkit: {
       options: {
-          version:"0.6.3",// 0.6.3 works with polymer , does not work from 0.7.0 onwards
+          version:"0.8.2",// 0.6.3 works with polymer , does not work from 0.7.0 onwards
           build_dir: './releases/desktop', // Where the build version of my node-webkit app is saved
           mac: false, // We want to build it for mac
           win: false, // We want to build it for win
-          linux32: true, // We don't need linux32
+          linux32: false, // We don't need linux32
           linux64: true // We don't need linux64
       },
       src: ['./build/**'] // Your node-wekit app
@@ -52,7 +52,6 @@ module.exports = function (grunt) {
        ]
      },
     },
-
     watch: {
       scripts: {
         files: ['src/**/*.*'],
