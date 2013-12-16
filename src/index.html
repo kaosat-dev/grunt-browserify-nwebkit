@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Node webkit test example</title>
+      <script src="components/platform/platform_.js"></script>
+      <link rel="import" href="components/polymer/polymer.html">
+
+       <link rel="import" href="foo-element/foo-element.html">
+      
+        <script src="bi_commonModule.js"></script>
+  </head>
+<body>
+  <div> oh yeah , I am heeere, rock on !!!!!!!</div>
+
+  <foo-element> </foo-element>
+
+
+  <script>
+    var browsserAndNodeModule = require("commonModule");
+    var answerToLifeEtc = browsserAndNodeModule.answer;
+    console.log("answerTo ....",answerToLifeEtc);
+    //document.write("answerTo ...."+answerToLifeEtc);
+
+    window.addEventListener('WebComponentsReady', function() {
+	    var fooElementInst = document.querySelector('foo-element');
+      console.log("fooElementInst",fooElementInst);
+
+    });
+  </script>  
+</body>
+</html>
